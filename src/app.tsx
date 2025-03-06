@@ -160,6 +160,8 @@ import {
 import { Button, Layout, Menu, theme } from "antd";
 import AddMovieModal from "./components/addModal";
 import MovieTable from "./components/cards";
+import ShowInformation from "./components/admin";
+import RAxmatKattakon from "./components/uploads";
 
 const { Header, Sider, Content } = Layout;
 
@@ -234,13 +236,21 @@ const App: React.FC = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          {selectedKey === "1" && <h2>👤 User Dashboard</h2>}
+          {selectedKey === "1" && (
+            <h2>
+              👤 <ShowInformation />
+            </h2>
+          )}
           {selectedKey === "2" && (
             <h2>
               🎥 <MovieTable />
             </h2>
           )}
-          {selectedKey === "3" && <h2>📤 File Uploads</h2>}
+          {selectedKey === "3" && (
+            <h2>
+              📤 <RAxmatKattakon />
+            </h2>
+          )}
         </Content>
       </Layout>
 
